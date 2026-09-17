@@ -1,0 +1,1112 @@
+extend type Mutation {
+  """
+  ✨ Insert a single `City` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  city_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: City_Data!
+  ): City_KeyOutput! @fdc_generated(from: "City", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `Cuisine` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  cuisine_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Cuisine_Data!
+  ): Cuisine_KeyOutput! @fdc_generated(from: "Cuisine", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `EstablishmentType` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  establishmentType_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: EstablishmentType_Data!
+  ): EstablishmentType_KeyOutput! @fdc_generated(from: "EstablishmentType", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `Favorite` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  favorite_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Favorite_Data!
+  ): Favorite_KeyOutput! @fdc_generated(from: "Favorite", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `Restaurant` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  restaurant_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Restaurant_Data!
+  ): Restaurant_KeyOutput! @fdc_generated(from: "Restaurant", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `RestaurantCuisine` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  restaurantCuisine_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: RestaurantCuisine_Data!
+  ): RestaurantCuisine_KeyOutput! @fdc_generated(from: "RestaurantCuisine", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `RestaurantType` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  restaurantType_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: RestaurantType_Data!
+  ): RestaurantType_KeyOutput! @fdc_generated(from: "RestaurantType", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `Review` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  review_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Review_Data!
+  ): Review_KeyOutput! @fdc_generated(from: "Review", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `Schedule` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  schedule_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Schedule_Data!
+  ): Schedule_KeyOutput! @fdc_generated(from: "Schedule", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `User` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  user_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: User_Data!
+  ): User_KeyOutput! @fdc_generated(from: "User", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert `City` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  city_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [City_Data!]!
+  ): [City_KeyOutput!]! @fdc_generated(from: "City", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `Cuisine` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  cuisine_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Cuisine_Data!]!
+  ): [Cuisine_KeyOutput!]! @fdc_generated(from: "Cuisine", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `EstablishmentType` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  establishmentType_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [EstablishmentType_Data!]!
+  ): [EstablishmentType_KeyOutput!]! @fdc_generated(from: "EstablishmentType", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `Favorite` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  favorite_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Favorite_Data!]!
+  ): [Favorite_KeyOutput!]! @fdc_generated(from: "Favorite", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `Restaurant` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  restaurant_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Restaurant_Data!]!
+  ): [Restaurant_KeyOutput!]! @fdc_generated(from: "Restaurant", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `RestaurantCuisine` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  restaurantCuisine_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [RestaurantCuisine_Data!]!
+  ): [RestaurantCuisine_KeyOutput!]! @fdc_generated(from: "RestaurantCuisine", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `RestaurantType` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  restaurantType_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [RestaurantType_Data!]!
+  ): [RestaurantType_KeyOutput!]! @fdc_generated(from: "RestaurantType", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `Review` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  review_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Review_Data!]!
+  ): [Review_KeyOutput!]! @fdc_generated(from: "Review", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `Schedule` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  schedule_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Schedule_Data!]!
+  ): [Schedule_KeyOutput!]! @fdc_generated(from: "Schedule", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `User` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  user_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [User_Data!]!
+  ): [User_KeyOutput!]! @fdc_generated(from: "User", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert or update a single `City` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `City`.
+  """
+  city_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: City_Data!
+  ): City_KeyOutput! @fdc_generated(from: "City", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `Cuisine` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Cuisine`.
+  """
+  cuisine_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Cuisine_Data!
+  ): Cuisine_KeyOutput! @fdc_generated(from: "Cuisine", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `EstablishmentType` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `EstablishmentType`.
+  """
+  establishmentType_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: EstablishmentType_Data!
+  ): EstablishmentType_KeyOutput! @fdc_generated(from: "EstablishmentType", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `Favorite` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Favorite`.
+  """
+  favorite_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Favorite_Data!
+  ): Favorite_KeyOutput! @fdc_generated(from: "Favorite", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `Restaurant` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Restaurant`.
+  """
+  restaurant_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Restaurant_Data!
+  ): Restaurant_KeyOutput! @fdc_generated(from: "Restaurant", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `RestaurantCuisine` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `RestaurantCuisine`.
+  """
+  restaurantCuisine_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: RestaurantCuisine_Data!
+  ): RestaurantCuisine_KeyOutput! @fdc_generated(from: "RestaurantCuisine", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `RestaurantType` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `RestaurantType`.
+  """
+  restaurantType_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: RestaurantType_Data!
+  ): RestaurantType_KeyOutput! @fdc_generated(from: "RestaurantType", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `Review` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Review`.
+  """
+  review_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Review_Data!
+  ): Review_KeyOutput! @fdc_generated(from: "Review", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `Schedule` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Schedule`.
+  """
+  schedule_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Schedule_Data!
+  ): Schedule_KeyOutput! @fdc_generated(from: "Schedule", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `User` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `User`.
+  """
+  user_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: User_Data!
+  ): User_KeyOutput! @fdc_generated(from: "User", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update `City` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `City`.
+  """
+  city_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [City_Data!]!
+  ): [City_KeyOutput!]! @fdc_generated(from: "City", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `Cuisine` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Cuisine`.
+  """
+  cuisine_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Cuisine_Data!]!
+  ): [Cuisine_KeyOutput!]! @fdc_generated(from: "Cuisine", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `EstablishmentType` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `EstablishmentType`.
+  """
+  establishmentType_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [EstablishmentType_Data!]!
+  ): [EstablishmentType_KeyOutput!]! @fdc_generated(from: "EstablishmentType", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `Favorite` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Favorite`.
+  """
+  favorite_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Favorite_Data!]!
+  ): [Favorite_KeyOutput!]! @fdc_generated(from: "Favorite", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `Restaurant` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Restaurant`.
+  """
+  restaurant_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Restaurant_Data!]!
+  ): [Restaurant_KeyOutput!]! @fdc_generated(from: "Restaurant", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `RestaurantCuisine` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `RestaurantCuisine`.
+  """
+  restaurantCuisine_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [RestaurantCuisine_Data!]!
+  ): [RestaurantCuisine_KeyOutput!]! @fdc_generated(from: "RestaurantCuisine", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `RestaurantType` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `RestaurantType`.
+  """
+  restaurantType_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [RestaurantType_Data!]!
+  ): [RestaurantType_KeyOutput!]! @fdc_generated(from: "RestaurantType", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `Review` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Review`.
+  """
+  review_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Review_Data!]!
+  ): [Review_KeyOutput!]! @fdc_generated(from: "Review", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `Schedule` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Schedule`.
+  """
+  schedule_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Schedule_Data!]!
+  ): [Schedule_KeyOutput!]! @fdc_generated(from: "Schedule", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `User` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `User`.
+  """
+  user_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [User_Data!]!
+  ): [User_KeyOutput!]! @fdc_generated(from: "User", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Update a single `City` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `City` or `null` if not found.
+  """
+  city_update(
+    """
+    The unique ID of the object.
+    """
+    id: String
+
+    """
+    ✨ `_expr` server value variant of `id` (The unique ID of the object.)
+    """
+    id_expr: String_Expr
+
+    """
+    The key used to identify the object.
+    """
+    key: City_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: City_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: City_Data!
+  ): City_KeyOutput @fdc_generated(from: "City", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `Cuisine` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Cuisine` or `null` if not found.
+  """
+  cuisine_update(
+    """
+    The unique ID of the object.
+    """
+    id: String
+
+    """
+    ✨ `_expr` server value variant of `id` (The unique ID of the object.)
+    """
+    id_expr: String_Expr
+
+    """
+    The key used to identify the object.
+    """
+    key: Cuisine_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Cuisine_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Cuisine_Data!
+  ): Cuisine_KeyOutput @fdc_generated(from: "Cuisine", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `EstablishmentType` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `EstablishmentType` or `null` if not found.
+  """
+  establishmentType_update(
+    """
+    The unique ID of the object.
+    """
+    id: String
+
+    """
+    ✨ `_expr` server value variant of `id` (The unique ID of the object.)
+    """
+    id_expr: String_Expr
+
+    """
+    The key used to identify the object.
+    """
+    key: EstablishmentType_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: EstablishmentType_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: EstablishmentType_Data!
+  ): EstablishmentType_KeyOutput @fdc_generated(from: "EstablishmentType", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `Favorite` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Favorite` or `null` if not found.
+  """
+  favorite_update(
+    """
+    The key used to identify the object.
+    """
+    key: Favorite_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Favorite_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Favorite_Data!
+  ): Favorite_KeyOutput @fdc_generated(from: "Favorite", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `Restaurant` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Restaurant` or `null` if not found.
+  """
+  restaurant_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Restaurant_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Restaurant_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Restaurant_Data!
+  ): Restaurant_KeyOutput @fdc_generated(from: "Restaurant", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `RestaurantCuisine` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `RestaurantCuisine` or `null` if not found.
+  """
+  restaurantCuisine_update(
+    """
+    The key used to identify the object.
+    """
+    key: RestaurantCuisine_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: RestaurantCuisine_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: RestaurantCuisine_Data!
+  ): RestaurantCuisine_KeyOutput @fdc_generated(from: "RestaurantCuisine", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `RestaurantType` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `RestaurantType` or `null` if not found.
+  """
+  restaurantType_update(
+    """
+    The key used to identify the object.
+    """
+    key: RestaurantType_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: RestaurantType_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: RestaurantType_Data!
+  ): RestaurantType_KeyOutput @fdc_generated(from: "RestaurantType", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `Review` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Review` or `null` if not found.
+  """
+  review_update(
+    """
+    The key used to identify the object.
+    """
+    key: Review_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Review_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Review_Data!
+  ): Review_KeyOutput @fdc_generated(from: "Review", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `Schedule` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Schedule` or `null` if not found.
+  """
+  schedule_update(
+    """
+    The key used to identify the object.
+    """
+    key: Schedule_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Schedule_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Schedule_Data!
+  ): Schedule_KeyOutput @fdc_generated(from: "Schedule", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `User` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `User` or `null` if not found.
+  """
+  user_update(
+    """
+    The unique ID of the object.
+    """
+    id: String
+
+    """
+    ✨ `_expr` server value variant of `id` (The unique ID of the object.)
+    """
+    id_expr: String_Expr
+
+    """
+    The key used to identify the object.
+    """
+    key: User_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: User_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: User_Data!
+  ): User_KeyOutput @fdc_generated(from: "User", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update `City` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  city_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: City_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: City_Data!
+  ): Int! @fdc_generated(from: "City", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `Cuisine` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  cuisine_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Cuisine_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Cuisine_Data!
+  ): Int! @fdc_generated(from: "Cuisine", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `EstablishmentType` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  establishmentType_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: EstablishmentType_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: EstablishmentType_Data!
+  ): Int! @fdc_generated(from: "EstablishmentType", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `Favorite` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  favorite_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Favorite_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Favorite_Data!
+  ): Int! @fdc_generated(from: "Favorite", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `Restaurant` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  restaurant_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Restaurant_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Restaurant_Data!
+  ): Int! @fdc_generated(from: "Restaurant", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `RestaurantCuisine` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  restaurantCuisine_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: RestaurantCuisine_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: RestaurantCuisine_Data!
+  ): Int! @fdc_generated(from: "RestaurantCuisine", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `RestaurantType` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  restaurantType_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: RestaurantType_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: RestaurantType_Data!
+  ): Int! @fdc_generated(from: "RestaurantType", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `Review` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  review_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Review_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Review_Data!
+  ): Int! @fdc_generated(from: "Review", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `Schedule` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  schedule_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Schedule_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Schedule_Data!
+  ): Int! @fdc_generated(from: "Schedule", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `User` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  user_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: User_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: User_Data!
+  ): Int! @fdc_generated(from: "User", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Delete a single `City` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  city_delete(
+    """
+    The unique ID of the object.
+    """
+    id: String
+
+    """
+    ✨ `_expr` server value variant of `id` (The unique ID of the object.)
+    """
+    id_expr: String_Expr
+
+    """
+    The key used to identify the object.
+    """
+    key: City_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: City_FirstRow
+  ): City_KeyOutput @fdc_generated(from: "City", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `Cuisine` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  cuisine_delete(
+    """
+    The unique ID of the object.
+    """
+    id: String
+
+    """
+    ✨ `_expr` server value variant of `id` (The unique ID of the object.)
+    """
+    id_expr: String_Expr
+
+    """
+    The key used to identify the object.
+    """
+    key: Cuisine_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Cuisine_FirstRow
+  ): Cuisine_KeyOutput @fdc_generated(from: "Cuisine", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `EstablishmentType` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  establishmentType_delete(
+    """
+    The unique ID of the object.
+    """
+    id: String
+
+    """
+    ✨ `_expr` server value variant of `id` (The unique ID of the object.)
+    """
+    id_expr: String_Expr
+
+    """
+    The key used to identify the object.
+    """
+    key: EstablishmentType_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: EstablishmentType_FirstRow
+  ): EstablishmentType_KeyOutput @fdc_generated(from: "EstablishmentType", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `Favorite` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  favorite_delete(
+    """
+    The key used to identify the object.
+    """
+    key: Favorite_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Favorite_FirstRow
+  ): Favorite_KeyOutput @fdc_generated(from: "Favorite", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `Restaurant` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  restaurant_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Restaurant_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Restaurant_FirstRow
+  ): Restaurant_KeyOutput @fdc_generated(from: "Restaurant", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `RestaurantCuisine` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  restaurantCuisine_delete(
+    """
+    The key used to identify the object.
+    """
+    key: RestaurantCuisine_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: RestaurantCuisine_FirstRow
+  ): RestaurantCuisine_KeyOutput @fdc_generated(from: "RestaurantCuisine", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `RestaurantType` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  restaurantType_delete(
+    """
+    The key used to identify the object.
+    """
+    key: RestaurantType_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: RestaurantType_FirstRow
+  ): RestaurantType_KeyOutput @fdc_generated(from: "RestaurantType", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `Review` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  review_delete(
+    """
+    The key used to identify the object.
+    """
+    key: Review_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Review_FirstRow
+  ): Review_KeyOutput @fdc_generated(from: "Review", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `Schedule` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  schedule_delete(
+    """
+    The key used to identify the object.
+    """
+    key: Schedule_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Schedule_FirstRow
+  ): Schedule_KeyOutput @fdc_generated(from: "Schedule", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `User` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  user_delete(
+    """
+    The unique ID of the object.
+    """
+    id: String
+
+    """
+    ✨ `_expr` server value variant of `id` (The unique ID of the object.)
+    """
+    id_expr: String_Expr
+
+    """
+    The key used to identify the object.
+    """
+    key: User_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: User_FirstRow
+  ): User_KeyOutput @fdc_generated(from: "User", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete `City` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  city_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: City_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "City", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `Cuisine` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  cuisine_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Cuisine_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Cuisine", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `EstablishmentType` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  establishmentType_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: EstablishmentType_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "EstablishmentType", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `Favorite` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  favorite_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Favorite_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Favorite", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `Restaurant` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  restaurant_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Restaurant_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Restaurant", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `RestaurantCuisine` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  restaurantCuisine_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: RestaurantCuisine_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "RestaurantCuisine", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `RestaurantType` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  restaurantType_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: RestaurantType_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "RestaurantType", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `Review` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  review_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Review_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Review", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `Schedule` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  schedule_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Schedule_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Schedule", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `User` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  user_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: User_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "User", purpose: DELETE_MULTIPLE)
+}

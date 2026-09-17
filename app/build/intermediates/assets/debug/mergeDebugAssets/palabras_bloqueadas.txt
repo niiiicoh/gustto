@@ -1,0 +1,6 @@
+# Lista configurable; una palabra por línea. Nunca bloquea por rating.
+idiota
+imbecil
+mierda
+conchetumare
+culiao

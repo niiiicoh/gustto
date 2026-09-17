@@ -1,0 +1,226 @@
+[
+    {
+        "merged": "com.example.gustto.app-debug-49:/layout_part_field.xml.flat",
+        "source": "com.example.gustto.app-main-51:/layout/part_field.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.gustto.app-main-51:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.gustto.app-main-51:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/layout_fragment_list.xml.flat",
+        "source": "com.example.gustto.app-main-51:/layout/fragment_list.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/drawable_ic_home.xml.flat",
+        "source": "com.example.gustto.app-main-51:/drawable/ic_home.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/drawable_ic_plus.xml.flat",
+        "source": "com.example.gustto.app-main-51:/drawable/ic_plus.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/layout_part_text.xml.flat",
+        "source": "com.example.gustto.app-main-51:/layout/part_text.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/drawable_ic_heart.xml.flat",
+        "source": "com.example.gustto.app-main-51:/drawable/ic_heart.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/layout_part_chip.xml.flat",
+        "source": "com.example.gustto.app-main-51:/layout/part_chip.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/xml_backup_rules.xml.flat",
+        "source": "com.example.gustto.app-main-51:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/drawable_bg_notice.xml.flat",
+        "source": "com.example.gustto.app-main-51:/drawable/bg_notice.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/menu_drawer.xml.flat",
+        "source": "com.example.gustto.app-main-51:/menu/drawer.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/drawable_ic_user.xml.flat",
+        "source": "com.example.gustto.app-main-51:/drawable/ic_user.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/drawable_ic_coffee.xml.flat",
+        "source": "com.example.gustto.app-main-51:/drawable/ic_coffee.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.gustto.app-main-51:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.gustto.app-main-51:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/layout_activity_main.xml.flat",
+        "source": "com.example.gustto.app-main-51:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/drawable_placeholder_food.xml.flat",
+        "source": "com.example.gustto.app-main-51:/drawable/placeholder_food.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.gustto.app-main-51:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.gustto.app-main-51:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/layout_item_review.xml.flat",
+        "source": "com.example.gustto.app-main-51:/layout/item_review.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/menu_bottom_nav.xml.flat",
+        "source": "com.example.gustto.app-main-51:/menu/bottom_nav.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/layout_fragment_form.xml.flat",
+        "source": "com.example.gustto.app-main-51:/layout/fragment_form.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/drawable_ic_search.xml.flat",
+        "source": "com.example.gustto.app-main-51:/drawable/ic_search.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.gustto.app-main-51:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/drawable_ic_shield.xml.flat",
+        "source": "com.example.gustto.app-main-51:/drawable/ic_shield.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.gustto.app-main-51:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.gustto.app-main-51:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/layout_part_chip_group.xml.flat",
+        "source": "com.example.gustto.app-main-51:/layout/part_chip_group.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/drawable_bg_panel.xml.flat",
+        "source": "com.example.gustto.app-main-51:/drawable/bg_panel.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/drawable_ic_check.xml.flat",
+        "source": "com.example.gustto.app-main-51:/drawable/ic_check.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.gustto.app-main-51:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/layout_part_image.xml.flat",
+        "source": "com.example.gustto.app-main-51:/layout/part_image.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/layout_drawer_header.xml.flat",
+        "source": "com.example.gustto.app-main-51:/layout/drawer_header.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/drawable_ic_logout.xml.flat",
+        "source": "com.example.gustto.app-main-51:/drawable/ic_logout.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.gustto.app-main-51:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/drawable_ic_pin.xml.flat",
+        "source": "com.example.gustto.app-main-51:/drawable/ic_pin.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/drawable_ic_arrow.xml.flat",
+        "source": "com.example.gustto.app-main-51:/drawable/ic_arrow.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/layout_part_switch.xml.flat",
+        "source": "com.example.gustto.app-main-51:/layout/part_switch.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/layout_part_button.xml.flat",
+        "source": "com.example.gustto.app-main-51:/layout/part_button.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/color_nav_tint.xml.flat",
+        "source": "com.example.gustto.app-main-51:/color/nav_tint.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/drawable_ic_menu.xml.flat",
+        "source": "com.example.gustto.app-main-51:/drawable/ic_menu.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/drawable_bg_soft.xml.flat",
+        "source": "com.example.gustto.app-main-51:/drawable/bg_soft.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.gustto.app-main-51:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/drawable_ic_star.xml.flat",
+        "source": "com.example.gustto.app-main-51:/drawable/ic_star.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/layout_part_rating.xml.flat",
+        "source": "com.example.gustto.app-main-51:/layout/part_rating.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/layout_part_list.xml.flat",
+        "source": "com.example.gustto.app-main-51:/layout/part_list.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.gustto.app-main-51:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/layout_fragment_map.xml.flat",
+        "source": "com.example.gustto.app-main-51:/layout/fragment_map.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.gustto.app-main-51:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/layout_item_restaurant.xml.flat",
+        "source": "com.example.gustto.app-main-51:/layout/item_restaurant.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/drawable_ic_filter.xml.flat",
+        "source": "com.example.gustto.app-main-51:/drawable/ic_filter.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/drawable_ic_history.xml.flat",
+        "source": "com.example.gustto.app-main-51:/drawable/ic_history.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.gustto.app-main-51:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/layout_part_spinner.xml.flat",
+        "source": "com.example.gustto.app-main-51:/layout/part_spinner.xml"
+    },
+    {
+        "merged": "com.example.gustto.app-debug-49:/drawable_ic_back.xml.flat",
+        "source": "com.example.gustto.app-main-51:/drawable/ic_back.xml"
+    }
+]

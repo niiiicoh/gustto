@@ -1,0 +1,43 @@
+mutation CreateProfile($username: String!) @auth(expr: "auth.uid != '' && vars.username.size() >= 3 && vars.username.size() <= 40") {
+ user_insert(data: {id_expr: "auth.uid", username: $username, email_expr: "auth.token.email", role: "USUARIO"})
+}
+mutation AddFavorite($restaurantId: UUID!) @auth(level: USER) @transaction {
+ query @redact { restaurant(id: $restaurantId) @check(expr: "this != null") { status @check(expr: "this != 'INACTIVO'") } }
+ favorite_upsert(data: {userId_expr: "auth.uid", restaurantId: $restaurantId})
+}
+mutation RemoveFavorite($restaurantId: UUID!) @auth(level: USER) {
+ favorite_delete(key: {userId_expr: "auth.uid", restaurantId: $restaurantId})
+}
+mutation SaveReview($restaurantId: UUID!, $rating: Int!, $comment: String!) @auth(expr: "auth.uid != '' && vars.rating >= 1 && vars.rating <= 5 && vars.comment.size() > 0 && vars.comment.size() <= 500") @transaction {
+ query @redact { restaurant(id: $restaurantId) @check(expr: "this != null") { status @check(expr: "this != 'INACTIVO'") } }
+ review_upsert(data: {userId_expr: "auth.uid", restaurantId: $restaurantId, rating: $rating, comment: $comment, updatedAt_expr: "request.time"})
+}
+mutation DeleteMyReview($restaurantId: UUID!) @auth(level: USER) {
+ review_delete(key: {userId_expr: "auth.uid", restaurantId: $restaurantId})
+}
+mutation ModerateReview($restaurantId: UUID!, $userId: String!) @auth(level: USER) @transaction {
+ query @redact { user(id_expr: "auth.uid") @check(expr: "this != null") @redact { role @check(expr: "this == 'ADMIN'", message: "Acceso restringido a administradores") } }
+ review_delete(key: {userId: $userId, restaurantId: $restaurantId})
+}
+mutation SetRestaurantStatus($id: UUID!, $status: String!) @auth(expr: "auth.uid != '' && vars.status in ['ACTIVO', 'CERRADO_TEMPORALMENTE', 'INACTIVO']") @transaction {
+ query @redact { user(id_expr: "auth.uid") @check(expr: "this != null") @redact { role @check(expr: "this == 'ADMIN'", message: "Acceso restringido a administradores") }
+ restaurant(id: $id) @check(expr: "this != null") {
+  restaurantTypes_on_restaurant @check(expr: "vars.status == 'INACTIVO' || this.size() > 0") { typeId }
+  restaurantCuisines_on_restaurant @check(expr: "vars.status == 'INACTIVO' || this.size() > 0") { cuisineId }
+  schedules_on_restaurant @check(expr: "vars.status == 'INACTIVO' || this.size() == 7") { day }
+ }
+ }
+ restaurant_update(id: $id, data: {status: $status, updatedAt_expr: "request.time"})
+}
+mutation SaveRestaurant($id: UUID!, $name: String!, $address: String!, $cityId: String!, $latitude: Float!, $longitude: Float!, $description: String, $phone: String, $website: String, $imageUrl: String!)
+ @auth(expr: "auth.uid != '' && vars.name.size() > 0 && vars.address.size() > 0 && vars.latitude >= -90 && vars.latitude <= 90 && vars.longitude >= -180 && vars.longitude <= 180 && vars.imageUrl.startsWith('https://')") @transaction {
+ query @redact { user(id_expr: "auth.uid") @check(expr: "this != null") { role @check(expr: "this == 'ADMIN'") } }
+ restaurant_upsert(data: {id: $id, name: $name, address: $address, cityId: $cityId, latitude: $latitude, longitude: $longitude, description: $description, phone: $phone, website: $website, imageUrl: $imageUrl, status: "INACTIVO", updatedAt_expr: "request.time"})
+ restaurantType_deleteMany(where: {restaurantId: {eq: $id}})
+ restaurantCuisine_deleteMany(where: {restaurantId: {eq: $id}})
+ schedule_deleteMany(where: {restaurantId: {eq: $id}})
+}
+mutation AssignType($restaurantId: UUID!, $typeId: String!) @auth(level: USER) @transaction { query @redact { user(id_expr: "auth.uid") @check(expr: "this != null") { role @check(expr: "this == 'ADMIN'") } } restaurantType_upsert(data: {restaurantId: $restaurantId, typeId: $typeId}) }
+mutation AssignCuisine($restaurantId: UUID!, $cuisineId: String!) @auth(level: USER) @transaction { query @redact { user(id_expr: "auth.uid") @check(expr: "this != null") { role @check(expr: "this == 'ADMIN'") } } restaurantCuisine_upsert(data: {restaurantId: $restaurantId, cuisineId: $cuisineId}) }
+mutation SaveSchedule($restaurantId: UUID!, $day: Int!, $opens: String!, $closes: String!, $closed: Boolean!) @auth(expr: "auth.uid != '' && vars.day >= 1 && vars.day <= 7 && (vars.closed || (vars.opens.matches('^([01][0-9]|2[0-3]):[0-5][0-9]$') && vars.closes.matches('^([01][0-9]|2[0-3]):[0-5][0-9]$') && vars.opens != vars.closes))") @transaction { query @redact { user(id_expr: "auth.uid") @check(expr: "this != null") { role @check(expr: "this == 'ADMIN'") } } schedule_upsert(data: {restaurantId: $restaurantId, day: $day, opens: $opens, closes: $closes, closed: $closed}) }
+

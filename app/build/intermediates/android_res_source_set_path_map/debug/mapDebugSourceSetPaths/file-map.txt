@@ -1,0 +1,8 @@
+com.example.gustto.app-pngs-0 G:\app\build\generated\res\pngs\debug
+com.example.gustto.app-updated_navigation_xml-1 G:\app\build\generated\updated_navigation_xml\debug
+com.example.gustto.app-packageDebugResources-2 G:\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.gustto.app-packageDebugResources-3 G:\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.gustto.app-debug-4 G:\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.example.gustto.app-debug-5 G:\app\src\debug\res
+com.example.gustto.app-main-6 G:\app\src\main\res
+gradleHome-0 C:\Users\nicob\.gradle

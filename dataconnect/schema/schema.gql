@@ -1,0 +1,52 @@
+type User @table(key: "id") {
+  id: String! @default(expr: "auth.uid")
+  username: String! @unique
+  email: String! @unique
+  role: String! @default(value: "USUARIO")
+  createdAt: Timestamp! @default(expr: "request.time")
+}
+type City @table(key: "id") { id: String! name: String! @unique }
+type Restaurant @table {
+  name: String!
+  address: String!
+  city: City!
+  latitude: Float!
+  longitude: Float!
+  description: String
+  phone: String
+  website: String
+  imageUrl: String!
+  status: String! @default(value: "ACTIVO")
+  createdAt: Timestamp! @default(expr: "request.time")
+  updatedAt: Timestamp! @default(expr: "request.time")
+}
+type EstablishmentType @table(key: "id") { id: String! name: String! @unique }
+type Cuisine @table(key: "id") { id: String! name: String! @unique }
+type RestaurantType @table(key: ["restaurant", "type"]) {
+  restaurant: Restaurant!
+  type: EstablishmentType!
+}
+type RestaurantCuisine @table(key: ["restaurant", "cuisine"]) {
+  restaurant: Restaurant!
+  cuisine: Cuisine!
+}
+type Schedule @table(key: ["restaurant", "day"]) {
+  restaurant: Restaurant!
+  day: Int!
+  opens: String
+  closes: String
+  closed: Boolean!
+}
+type Review @table(key: ["user", "restaurant"]) {
+  user: User!
+  restaurant: Restaurant!
+  rating: Int!
+  comment: String!
+  createdAt: Timestamp! @default(expr: "request.time")
+  updatedAt: Timestamp! @default(expr: "request.time")
+}
+type Favorite @table(key: ["user", "restaurant"]) {
+  user: User!
+  restaurant: Restaurant!
+  createdAt: Timestamp! @default(expr: "request.time")
+}

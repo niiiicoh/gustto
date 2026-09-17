@@ -1,0 +1,18 @@
+query ListRestaurants @auth(level: PUBLIC) { restaurants(where: {status: {ne: "INACTIVO"}}, limit: 1000) { id name address city { id name } latitude longitude description phone website imageUrl status
+ restaurantTypes_on_restaurant { type { id name } }
+ restaurantCuisines_on_restaurant { cuisine { id name } }
+ schedules_on_restaurant { day opens closes closed }
+ reviews_on_restaurant { user { id username } rating comment createdAt updatedAt } } }
+query AdminRestaurants @auth(level: USER) { user(id_expr: "auth.uid") @check(expr: "this != null") @redact { role @check(expr: "this == 'ADMIN'", message: "Acceso restringido a administradores") } restaurants(limit: 1000) { id name address city { id name } latitude longitude description phone website imageUrl status
+ restaurantTypes_on_restaurant { type { id name } }
+ restaurantCuisines_on_restaurant { cuisine { id name } }
+ schedules_on_restaurant { day opens closes closed }
+ reviews_on_restaurant { user { id username } rating comment createdAt updatedAt } } }
+query MyProfile @auth(level: USER) { user(id_expr: "auth.uid") { id username email role createdAt } }
+query MyFavorites @auth(level: USER) { favorites(where: {userId: {eq_expr: "auth.uid"}, restaurant: {status: {ne: "INACTIVO"}}}, limit: 1000) { restaurant { id name address city { id name } latitude longitude description phone website imageUrl status
+ restaurantTypes_on_restaurant { type { id name } }
+ restaurantCuisines_on_restaurant { cuisine { id name } }
+ schedules_on_restaurant { day opens closes closed }
+ reviews_on_restaurant { user { id username } rating comment createdAt updatedAt } } } }
+query Catalogs @auth(level: PUBLIC) { cities { id name } establishmentTypes { id name } cuisines { id name } }
+query AdminReviews @auth(level: USER) { user(id_expr: "auth.uid") @check(expr: "this != null") @redact { role @check(expr: "this == 'ADMIN'", message: "Acceso restringido a administradores") } reviews(limit: 1000, orderBy: {updatedAt: DESC}) { user { id username } restaurant { id name } rating comment createdAt updatedAt } }

@@ -1,0 +1,527 @@
+extend type Query {
+  """
+  ✨ Look up a single `City` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  city(
+    """
+    The unique ID of the object.
+    """
+    id: String
+
+    """
+    ✨ `_expr` server value variant of `id` (The unique ID of the object.)
+    """
+    id_expr: String_Expr
+
+    """
+    The key used to identify the object.
+    """
+    key: City_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: City_FirstRow
+  ): City @fdc_generated(from: "City", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `Cuisine` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  cuisine(
+    """
+    The unique ID of the object.
+    """
+    id: String
+
+    """
+    ✨ `_expr` server value variant of `id` (The unique ID of the object.)
+    """
+    id_expr: String_Expr
+
+    """
+    The key used to identify the object.
+    """
+    key: Cuisine_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Cuisine_FirstRow
+  ): Cuisine @fdc_generated(from: "Cuisine", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `EstablishmentType` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  establishmentType(
+    """
+    The unique ID of the object.
+    """
+    id: String
+
+    """
+    ✨ `_expr` server value variant of `id` (The unique ID of the object.)
+    """
+    id_expr: String_Expr
+
+    """
+    The key used to identify the object.
+    """
+    key: EstablishmentType_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: EstablishmentType_FirstRow
+  ): EstablishmentType @fdc_generated(from: "EstablishmentType", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `Favorite` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  favorite(
+    """
+    The key used to identify the object.
+    """
+    key: Favorite_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Favorite_FirstRow
+  ): Favorite @fdc_generated(from: "Favorite", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `Restaurant` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  restaurant(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Restaurant_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Restaurant_FirstRow
+  ): Restaurant @fdc_generated(from: "Restaurant", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `RestaurantCuisine` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  restaurantCuisine(
+    """
+    The key used to identify the object.
+    """
+    key: RestaurantCuisine_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: RestaurantCuisine_FirstRow
+  ): RestaurantCuisine @fdc_generated(from: "RestaurantCuisine", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `RestaurantType` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  restaurantType(
+    """
+    The key used to identify the object.
+    """
+    key: RestaurantType_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: RestaurantType_FirstRow
+  ): RestaurantType @fdc_generated(from: "RestaurantType", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `Review` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  review(
+    """
+    The key used to identify the object.
+    """
+    key: Review_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Review_FirstRow
+  ): Review @fdc_generated(from: "Review", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `Schedule` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  schedule(
+    """
+    The key used to identify the object.
+    """
+    key: Schedule_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Schedule_FirstRow
+  ): Schedule @fdc_generated(from: "Schedule", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `User` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  user(
+    """
+    The unique ID of the object.
+    """
+    id: String
+
+    """
+    ✨ `_expr` server value variant of `id` (The unique ID of the object.)
+    """
+    id_expr: String_Expr
+
+    """
+    The key used to identify the object.
+    """
+    key: User_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: User_FirstRow
+  ): User @fdc_generated(from: "User", purpose: QUERY_SINGLE)
+  """
+  ✨ List `City` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  cities(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: City_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [City_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: City_Having
+  ): [City!]! @fdc_generated(from: "City", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `Cuisine` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  cuisines(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Cuisine_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Cuisine_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Cuisine_Having
+  ): [Cuisine!]! @fdc_generated(from: "Cuisine", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `EstablishmentType` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  establishmentTypes(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: EstablishmentType_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [EstablishmentType_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: EstablishmentType_Having
+  ): [EstablishmentType!]! @fdc_generated(from: "EstablishmentType", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `Favorite` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  favorites(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Favorite_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Favorite_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Favorite_Having
+  ): [Favorite!]! @fdc_generated(from: "Favorite", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `Restaurant` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  restaurants(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Restaurant_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Restaurant_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Restaurant_Having
+  ): [Restaurant!]! @fdc_generated(from: "Restaurant", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `RestaurantCuisine` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  restaurantCuisines(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: RestaurantCuisine_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [RestaurantCuisine_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: RestaurantCuisine_Having
+  ): [RestaurantCuisine!]! @fdc_generated(from: "RestaurantCuisine", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `RestaurantType` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  restaurantTypes(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: RestaurantType_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [RestaurantType_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: RestaurantType_Having
+  ): [RestaurantType!]! @fdc_generated(from: "RestaurantType", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `Review` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  reviews(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Review_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Review_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Review_Having
+  ): [Review!]! @fdc_generated(from: "Review", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `Schedule` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  schedules(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Schedule_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Schedule_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Schedule_Having
+  ): [Schedule!]! @fdc_generated(from: "Schedule", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `User` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  users(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: User_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [User_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: User_Having
+  ): [User!]! @fdc_generated(from: "User", purpose: QUERY_MULTIPLE)
+}

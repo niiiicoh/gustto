@@ -1,0 +1,56 @@
+extend type Favorite {
+  """
+  ✨ Implicit foreign key field based on `Favorite`.`user`. It must match the value of `User`.`id`. See `@ref` for how to customize it.
+  """
+  userId: String! @fdc_generated(from: "Favorite.user", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Favorite`.`restaurant`. It must match the value of `Restaurant`.`id`. See `@ref` for how to customize it.
+  """
+  restaurantId: UUID! @fdc_generated(from: "Favorite.restaurant", purpose: IMPLICIT_REF_FIELD)
+}
+extend type Restaurant {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Restaurant", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Restaurant`.`city`. It must match the value of `City`.`id`. See `@ref` for how to customize it.
+  """
+  cityId: String! @fdc_generated(from: "Restaurant.city", purpose: IMPLICIT_REF_FIELD)
+}
+extend type RestaurantCuisine {
+  """
+  ✨ Implicit foreign key field based on `RestaurantCuisine`.`restaurant`. It must match the value of `Restaurant`.`id`. See `@ref` for how to customize it.
+  """
+  restaurantId: UUID! @fdc_generated(from: "RestaurantCuisine.restaurant", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `RestaurantCuisine`.`cuisine`. It must match the value of `Cuisine`.`id`. See `@ref` for how to customize it.
+  """
+  cuisineId: String! @fdc_generated(from: "RestaurantCuisine.cuisine", purpose: IMPLICIT_REF_FIELD)
+}
+extend type RestaurantType {
+  """
+  ✨ Implicit foreign key field based on `RestaurantType`.`restaurant`. It must match the value of `Restaurant`.`id`. See `@ref` for how to customize it.
+  """
+  restaurantId: UUID! @fdc_generated(from: "RestaurantType.restaurant", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `RestaurantType`.`type`. It must match the value of `EstablishmentType`.`id`. See `@ref` for how to customize it.
+  """
+  typeId: String! @fdc_generated(from: "RestaurantType.type", purpose: IMPLICIT_REF_FIELD)
+}
+extend type Review {
+  """
+  ✨ Implicit foreign key field based on `Review`.`user`. It must match the value of `User`.`id`. See `@ref` for how to customize it.
+  """
+  userId: String! @fdc_generated(from: "Review.user", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Review`.`restaurant`. It must match the value of `Restaurant`.`id`. See `@ref` for how to customize it.
+  """
+  restaurantId: UUID! @fdc_generated(from: "Review.restaurant", purpose: IMPLICIT_REF_FIELD)
+}
+extend type Schedule {
+  """
+  ✨ Implicit foreign key field based on `Schedule`.`restaurant`. It must match the value of `Restaurant`.`id`. See `@ref` for how to customize it.
+  """
+  restaurantId: UUID! @fdc_generated(from: "Schedule.restaurant", purpose: IMPLICIT_REF_FIELD)
+}

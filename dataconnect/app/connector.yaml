@@ -1,0 +1,5 @@
+connectorId: "app"
+generate:
+  kotlinSdk:
+    outputDir: "../../app/src/main/java"
+    package: "com.example.gustto.generated"

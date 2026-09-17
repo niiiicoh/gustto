@@ -1,0 +1,3 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:fillViewport="true" android:layout_width="match_parent" android:layout_height="match_parent">
+  <LinearLayout android:id="@+id/form_content" android:orientation="vertical" android:padding="@dimen/screen_gutter" android:layout_width="match_parent" android:layout_height="wrap_content" />
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,11 @@
+specVersion: "v1"
+serviceId: "gustto"
+location: "southamerica-east1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "gustto"
+      cloudSql:
+        instanceId: "gustto-postgres"
+connectorDirs: ["./app"]

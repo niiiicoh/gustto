@@ -1,0 +1,12 @@
+<resources>
+  <color name="burgundy">#802F3E</color>
+  <color name="burgundy_dark">#601F2D</color>
+  <color name="cream">#FBF7F1</color>
+  <color name="paper">#FFFFFF</color>
+  <color name="ink">#352A2B</color>
+  <color name="muted">#766766</color>
+  <color name="rose">#F7E7E6</color>
+  <color name="line">#E8DCD5</color>
+  <color name="olive">#496B50</color>
+  <color name="terracotta">#D86A47</color>
+</resources>

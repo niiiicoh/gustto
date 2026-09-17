@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.gustto.DomainTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-09-17T04:15:06.193Z" hostname="DESKTOP-OEFQ9VO" time="0.009">
+  <properties/>
+  <testcase name="restaurantRequiresUniqueSevenDaySchedule" classname="com.example.gustto.DomainTest" time="0.002"/>
+  <testcase name="overnightHoursAreValid" classname="com.example.gustto.DomainTest" time="0.001"/>
+  <testcase name="ratingAndCommentBounds" classname="com.example.gustto.DomainTest" time="0.0"/>
+  <testcase name="filtersCombineWithOrWithinAndBetweenCategories" classname="com.example.gustto.DomainTest" time="0.0"/>
+  <testcase name="distancesAndGeographicEdgeCases" classname="com.example.gustto.DomainTest" time="0.001"/>
+  <testcase name="hoursRejectInvalidAndZeroDuration" classname="com.example.gustto.DomainTest" time="0.0"/>
+  <testcase name="accentInsensitiveSearch" classname="com.example.gustto.DomainTest" time="0.0"/>
+  <testcase name="urlsMustHaveSecureSchemeAndHost" classname="com.example.gustto.DomainTest" time="0.0"/>
+  <testcase name="profanityNormalizesAndUsesWordBoundaries" classname="com.example.gustto.DomainTest" time="0.001"/>
+  <testcase name="inactiveNeverMatches" classname="com.example.gustto.DomainTest" time="0.0"/>
+  <testcase name="averageComesFromReviews" classname="com.example.gustto.DomainTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

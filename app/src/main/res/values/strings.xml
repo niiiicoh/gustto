@@ -1,0 +1,21 @@
+<resources>
+  <string name="app_name">Gustto</string>
+  <string name="menu_open">Abrir menú</string>
+  <string name="back">Volver</string>
+  <string name="search_hint">Buscar restaurantes, café, sushi…</string>
+  <string name="favorite">Guardar en favoritos</string>
+  <string name="filter">Abrir filtros</string>
+  <string name="location">Usar mi ubicación</string>
+  <string name="label_8">Descubre sabores cerca de ti</string>
+  <string name="label_9">Actualizar</string>
+  <string name="label_10">Usar esta ubicación</string>
+  <string name="label_11">Eliminar</string>
+  <string name="label_12">Inicio</string>
+  <string name="label_13">Explorar</string>
+  <string name="label_14">Favoritos</string>
+  <string name="label_15">Perfil</string>
+  <string name="label_16">Inicio / Mapa</string>
+  <string name="label_17">Historial / Recientes</string>
+  <string name="label_18">Panel de administración</string>
+  <string name="label_19">Iniciar sesión</string>
+</resources>

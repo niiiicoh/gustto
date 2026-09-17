@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 9.4.0" type="partial_results">
+    <map id="UnsafeImplicitIntentLaunch">
+            <map id="actionsSent">
+                    <map id="android.intent.action.DIAL (used to start an activity)">
+                        <location id="0"
+                            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/gustto/ui/DetailFragment.java"
+                            line="18"
+                            column="571"
+                            startOffset="1975"
+                            endLine="18"
+                            endColumn="639"
+                            endOffset="2043"/>
+                    </map>
+                    <map id="android.intent.action.VIEW (used to start an activity)">
+                        <location id="0"
+                            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/gustto/ui/DetailFragment.java"
+                            line="21"
+                            column="53"
+                            startOffset="3289"
+                            endLine="21"
+                            endColumn="98"
+                            endOffset="3334"/>
+                    </map>
+            </map>
+    </map>
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="com.example.gustto.MainActivity"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <location id="R.color.burgundy_dark"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="1"
+            column="57"
+            startOffset="56"
+            endLine="1"
+            endColumn="77"
+            endOffset="76"/>
+        <location id="R.color.line"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="1"
+            column="272"
+            startOffset="271"
+            endLine="1"
+            endColumn="283"
+            endOffset="282"/>
+        <location id="R.drawable.bg_notice"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/bg_notice.xml"
+            line="1"
+            column="1"
+            startOffset="0"
+            endLine="1"
+            endColumn="143"
+            endOffset="142"/>
+        <location id="R.drawable.ic_arrow"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/ic_arrow.xml"
+            line="1"
+            column="1"
+            startOffset="0"
+            endLine="1"
+            endColumn="406"
+            endOffset="405"/>
+        <location id="R.drawable.ic_check"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/ic_check.xml"
+            line="1"
+            column="1"
+            startOffset="0"
+            endLine="1"
+            endColumn="391"
+            endOffset="390"/>
+        <location id="R.drawable.ic_coffee"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/ic_coffee.xml"
+            line="1"
+            column="1"
+            startOffset="0"
+            endLine="1"
+            endColumn="464"
+            endOffset="463"/>
+        <location id="R.drawable.ic_pin"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/ic_pin.xml"
+            line="1"
+            column="1"
+            startOffset="0"
+            endLine="1"
+            endColumn="471"
+            endOffset="470"/>
+        <location id="R.drawable.ic_plus"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/ic_plus.xml"
+            line="1"
+            column="1"
+            startOffset="0"
+            endLine="1"
+            endColumn="399"
+            endOffset="398"/>
+        <location id="R.drawable.ic_star"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/ic_star.xml"
+            line="1"
+            column="1"
+            startOffset="0"
+            endLine="1"
+            endColumn="438"
+            endOffset="437"/>
+        <location id="R.string.back"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="1"
+            column="103"
+            startOffset="102"
+            endLine="1"
+            endColumn="114"
+            endOffset="113"/>
+        <location id="R.string.location"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="1"
+            column="304"
+            startOffset="303"
+            endLine="1"
+            endColumn="319"
+            endOffset="318"/>
+        <entry
+            name="model"
+            string="attr[selectableItemBackground(R),selectableItemBackgroundBorderless(R)],color[nav_tint(U),burgundy(U),muted(U),line(D),paper(U),rose(U),cream(U),ink(U),terracotta(U),burgundy_dark(D),olive(U)],drawable[bg_notice(D),bg_panel(U),bg_soft(U),ic_arrow(D),ic_back(U),ic_check(D),ic_coffee(D),ic_filter(U),ic_heart(U),ic_history(U),ic_home(U),ic_launcher_background(U),ic_launcher_foreground(U),ic_launcher_foreground_1(R),ic_logout(U),ic_menu(U),ic_pin(D),ic_plus(D),ic_search(U),ic_shield(U),ic_star(D),ic_user(U),placeholder_food(U)],id[drawer(U),main(U),toolbar(U),content(U),bottom_nav(U),navigation(U),drawer_name(U),form_content(U),list_header(U),page_title(U),page_subtitle(U),search_row(U),search(U),filters(U),chips_scroll(U),quick_chips(U),list_notice(U),map_container(U),list_count(U),list_action(U),progress(U),empty(U),list(U),map_host(U),map_description(U),map_confirm(U),restaurant_row(U),restaurant_image(U),restaurant_name(U),restaurant_category(U),restaurant_rating(U),restaurant_status(U),restaurant_favorite(U),review_name(U),review_rating(U),review_body(U),review_action(U),nav_home(U),nav_explore(U),nav_favorites(U),nav_profile(U),nav_history(U),nav_admin(U),nav_auth(U)],layout[activity_main(U),drawer_header(U),fragment_form(U),fragment_list(U),fragment_map(U),item_restaurant(U),item_review(U),part_button(U),part_chip(U),part_chip_group(U),part_field(U),part_image(U),part_list(U),part_rating(U),part_spinner(U),part_switch(U),part_text(U)],menu[bottom_nav(U),drawer(U)],mipmap[ic_launcher(U),ic_launcher_round(U)],string[app_name(U),menu_open(U),search_hint(U),filter(U),favorite(U),back(D),location(D)],style[Theme_Gustto(U),Gustto_Title(U),Gustto_Body(U),Widget_Material3_Button_TextButton(R),Widget_Material3_Chip_Filter(R),Theme_Material3_Light_NoActionBar(R),Gustto_Button(U),Widget_Material3_Button(R)],xml[data_extraction_rules(U),backup_rules(U)];2^3^4,d^5,e^6,f^7,10^3,11^3,12^3,13^3,14^3,15^3,16^3,17^3,19^1a,1b^3,1c^3,1d^3,1e^3,1f^3,20^3,21^3,22^3,50^8^66^1c^3^6^2^61^51^9^62,51^3^6d^6e,53^6d^6e^67^6^1f^f^68^14^4^6f,54^6e,55^6^0^23^9^6e^4^3^1^69^15,56^6^9^3^6e^6f,58^70,5a^6,5b^23,5d^a,5e^e,60^6e,61^17^1f^15^22,62^17^1f^15^16^22^20^1b,63^18^19,64^18^19,6c^71^3^6^7^c^8^9^72,6d^9,6e^4,72^73;;;"/>
+    </map>
+
+</incidents>
