@@ -2,9 +2,9 @@ import java.util.Properties
 
 plugins {
     alias(libs.plugins.android.application)
+    id("com.google.gms.google-services")
     kotlin("plugin.serialization")
 }
-if (file("google-services.json").exists()) { apply(plugin = "com.google.gms.google-services") }
 
 val localConfig = Properties().apply {
     val file = rootProject.file("local.properties")

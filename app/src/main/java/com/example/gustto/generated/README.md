@@ -3,7 +3,7 @@
 This Kotlin package provides a type-safe library
 for the Firebase Data Connect connector named `app`,
 with service ID `gustto`
-hosted in `southamerica-east1`.
+hosted in `southamerica-west1`.
 
 To use this package, it is typical to add the following imports
 to each Kotlin source file that uses the connector:

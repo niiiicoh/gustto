@@ -58,7 +58,7 @@ public interface AppConnector : com.google.firebase.dataconnect.generated.Genera
     @Suppress("MemberVisibilityCanBePrivate")
     public val config: com.google.firebase.dataconnect.ConnectorConfig = com.google.firebase.dataconnect.ConnectorConfig(
       connector = "app",
-      location = "southamerica-east1",
+      location = "southamerica-west1",
       serviceId = "gustto",
     )
 

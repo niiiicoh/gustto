@@ -1,6 +1,6 @@
 specVersion: "v1"
 serviceId: "gustto"
-location: "southamerica-east1"
+location: "southamerica-west1"
 schema:
   source: "./schema"
   datasource:
